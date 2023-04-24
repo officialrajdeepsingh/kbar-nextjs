@@ -1,9 +1,6 @@
 import * as React from "react";
 import { Card } from "@/components/Card";
 import { posts } from "../../data/post";
-import { Action, useRegisterActions } from "kbar";
-import { useRouter } from "next/router";
-
 
 export default function Home() {
 
