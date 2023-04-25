@@ -4,6 +4,7 @@ import { posts } from "../../data/post";
 
 export default function Home() {
 
+
   return (
     <>
 
@@ -18,7 +19,7 @@ export default function Home() {
           <div className="flex flex-wrap -m-12">
 
             {
-              posts.map(item => <Card item={item} />)
+              posts.map(item => <Card key={item.id} item={item} />)
             }
 
           </div>
