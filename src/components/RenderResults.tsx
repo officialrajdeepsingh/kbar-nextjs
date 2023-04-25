@@ -2,7 +2,7 @@ import { KBarResults, useMatches } from "kbar";
 import ResultItem from "./ResultItem";
 
 export default function RenderResults() {
-  const { results, rootActionId } = useMatches();
+  const { results } = useMatches();
 
   return (
     <KBarResults
@@ -14,7 +14,6 @@ export default function RenderResults() {
           <ResultItem
             action={item}
             active={active}
-            currentRootActionId={rootActionId}
           />
         )
       }
