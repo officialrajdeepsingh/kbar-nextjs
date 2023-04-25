@@ -1,7 +1,21 @@
 import Link from 'next/link'
 import React from 'react'
+import { useRegisterActions } from "kbar";
+import { useRouter } from 'next/router';
 
-export const Card = ({ item }) => {
+
+export const Card = ({ item }: { item: {  title: string; description: string; tags: string[]; } }) => {
+  const router = useRouter();
+
+  useRegisterActions([{
+    id: item.title,
+    name: item.title,
+    keywords: "item.description",
+    shortcut: [],
+    perform: () => router.push("/blog-my-title"),
+    parent: "blog",
+  }]);
+
   return (
     <div className="p-12 md:w-1/2 flex flex-col items-start">
       <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">{item.tags[0]}</span>
