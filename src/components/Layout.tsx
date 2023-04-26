@@ -4,7 +4,7 @@ import { KBarAnimator, KBarPortal, KBarPositioner, KBarSearch, KBarProvider, Act
 import { useTheme } from 'next-themes';
 import RenderResults from "@/components/RenderResults";
 import { FaHome, FaGithub, FaPhoneAlt, FaTwitter, FaBook, FaRegSun, FaSun, FaMoon, FaSearch } from "react-icons/fa";
-import React, { ReactChildren} from "react"
+import React from "react"
 
 export default function Layout({ children }:{children: React.ReactNode}) {
 
