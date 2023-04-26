@@ -10,7 +10,7 @@ export const Card = ({ item }: { item: {  title: string; description: string; ta
   useRegisterActions([{
     id: item.title,
     name: item.title,
-    keywords: "item.description",
+    keywords: item.description,
     shortcut: [],
     perform: () => router.push("/blog-my-title"),
     parent: "blog",
