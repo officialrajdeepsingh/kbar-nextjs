@@ -2,6 +2,10 @@ I built the `command + K` interface with KBar and Nextjs and designed it with ta
 
 [Check out online Demo](https://officialrajdeepsingh.github.io/kbar-nextjs/) 
 
+## Demo
+![demo](/public/kbar-next.gif)
+
+
 Read the [full article ](https://medium.com/frontendweb/how-to-build-a-command-k-interface-with-nextjs-and-kbar-b10aa9b08a17)
 
 ## Getting Started
