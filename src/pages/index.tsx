@@ -2,8 +2,8 @@ import * as React from "react";
 import { Card } from "@/components/Card";
 import { posts } from "../../data/post";
 
+// Home component
 export default function Home() {
-
 
   return (
     <>
