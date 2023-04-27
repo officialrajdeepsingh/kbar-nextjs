@@ -1,3 +1,4 @@
+// Docs component
 export default function Docs() {
   return <div className="h-screen w-screen flex flex-col justify-center items-center">
     <h1 className="text-6xl text-black dark:text-white -mt-12 mb-24">Docs</h1>
