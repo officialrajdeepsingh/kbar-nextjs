@@ -3,10 +3,13 @@ import React from 'react'
 import { useRegisterActions } from "kbar";
 import { useRouter } from 'next/router';
 
-
+// Card component
 export const Card = ({ item }: { item: {  title: string; description: string; tags: string[]; } }) => {
+  
+  // router 
   const router = useRouter();
 
+  // Register Action 
   useRegisterActions([{
     id: item.title,
     name: item.title,

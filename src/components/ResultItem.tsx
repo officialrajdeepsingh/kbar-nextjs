@@ -1,18 +1,10 @@
 import * as React from "react";
 import { ActionImpl } from "kbar";
 
-
+// Forward Ref 
 const ResultItem = React.forwardRef(
 
-  function ResultItem({
-    action,
-    active
-  }: {
-    action: ActionImpl;
-    active: boolean;
-  },
-    ref: React.Ref<HTMLDivElement>
-  ) {
+  function ResultItem({ action, active}: { action: ActionImpl; active: boolean;},ref: React.Ref<HTMLDivElement>) {
 
     return (
       <div ref={ref} className={active ? `px-3 py-2 leading-none rounded text-violet11 flex items-center justify-between bg-violet4` : `px-3 py-2 leading-none rounded text-violet11 flex items-center justify-between hover:bg-violet4`} >

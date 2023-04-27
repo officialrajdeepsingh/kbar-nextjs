@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import toast from "react-hot-toast";
-import { KBarAnimator, KBarPortal, KBarPositioner, KBarSearch, KBarProvider, ActionImpl,Action } from "kbar";
+import { KBarAnimator, KBarPortal, KBarPositioner, KBarSearch, KBarProvider,Action } from "kbar";
 import { useTheme } from 'next-themes';
 import RenderResults from "@/components/RenderResults";
 import { FaHome, FaGithub, FaPhoneAlt, FaTwitter, FaBook, FaRegSun, FaSun, FaMoon, FaSearch } from "react-icons/fa";
@@ -8,10 +8,13 @@ import React from "react"
 
 export default function Layout({ children }:{children: React.ReactNode}) {
 
+  // toggle theme
   const { setTheme } = useTheme()
 
+  // Define the router 
   const router = useRouter();
 
+  // Create the Action
   const actions:Action[] = [
     {
       id: "homeAction",
@@ -115,7 +118,13 @@ export default function Layout({ children }:{children: React.ReactNode}) {
 
   ];
 
-  return (<KBarProvider options={{ enableHistory: true }} actions={actions}>
+  /* This code is creating a layout component that wraps around the main content of a Next.js
+  application. The layout component is using the KBar library to provide a search bar and a
+  set of actions that can be performed by the user. */
+
+  
+  return (
+  <KBarProvider options={{ enableHistory: true }} actions={actions}>
 
     {children}
 
@@ -127,5 +136,6 @@ export default function Layout({ children }:{children: React.ReactNode}) {
         </KBarAnimator>
       </KBarPositioner>
     </KBarPortal>
-  </KBarProvider>)
+  </KBarProvider>
+  )
 }

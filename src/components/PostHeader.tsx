@@ -2,13 +2,13 @@ import React from "react";
 import { FaAngleLeft } from "react-icons/fa";
 import Image from "next/image"
 import Link from "next/link";
+
+// Header component
 function Header(props: PostHeaderComponent) {
 
   return (
 
     <header className="w-full flex flex-col py-5 bg-[rgba(35,46,82,1)]">
-
-
 
       <div className="container flex flex-col  mx-auto my-32 p-10">
 
